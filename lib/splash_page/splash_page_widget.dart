@@ -26,13 +26,6 @@ class _SplashPageWidgetState extends State<SplashPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => SplashPageModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await actions.checkAndNavigate(
-        context,
-      );
-    });
   }
 
   @override
@@ -83,7 +76,7 @@ class _SplashPageWidgetState extends State<SplashPageWidget> {
                   ),
                 ),
                 Text(
-                  'Created as an expiment by a yound and talented scientist.',
+                  'Created as an expiment by a young and talented scientist.',
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyMedium,
                 ),

@@ -16,7 +16,11 @@ class SplashPageModel extends FlutterFlowModel<SplashPageWidget> {
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 1000), () {
+      context.go("/loginPage");
+    });
+  }
 
   void dispose() {
     unfocusNode.dispose();
